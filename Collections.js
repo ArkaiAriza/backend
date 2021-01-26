@@ -1,4 +1,5 @@
 Product = {
+  _id: ObjectId,
   name: String,
   description: String,
   price: Number,
@@ -8,11 +9,13 @@ Product = {
 };
 
 Category = {
+  _id: ObjectId,
   name: String,
   description: String,
 };
 
 Order = {
+  _id: ObjectId,
   products: [
     {
       product: { type: mongoose.Schema.Types.ObjectId, ref: 'Product' },
